@@ -1,10 +1,10 @@
 package xyz.marlon.flappy.estados;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import xyz.marlon.flappy.Game;
-import xyz.marlon.flappy.ManejadorEstados;
 
 /**
  * Created by marlon on 25/09/16.
@@ -22,12 +22,15 @@ public class Menu extends Estado {
 
     @Override
     protected void entrada() {
-
+        if (Gdx.input.justTouched()){
+            manejador.set(new Juego(manejador));
+            dispose();
+        }
     }
 
     @Override
     public void upadate(float dt) {
-
+        entrada();
     }
 
     @Override

@@ -1,4 +1,4 @@
-package xyz.marlon.flappy;
+package xyz.marlon.flappy.estados;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 

@@ -5,7 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import xyz.marlon.flappy.estados.Menu;
+import xyz.marlon.flappy.estados.*;
 
 public class Game extends ApplicationAdapter {
 	public static final int 	WIDTH	= 480;
@@ -17,12 +17,12 @@ public class Game extends ApplicationAdapter {
 		return super.hashCode();
 	}
 
-	private ManejadorEstados me;
+	private xyz.marlon.flappy.estados.ManejadorEstados me;
 	private SpriteBatch batch;
 
 	@Override
 	public void create () {
-		me = new ManejadorEstados();
+		me = new xyz.marlon.flappy.estados.ManejadorEstados();
 		batch = new SpriteBatch();
 		Gdx.gl.glClearColor(1, 0, 0, 1);
 		me.push(new Menu(me));
